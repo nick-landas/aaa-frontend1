@@ -17,7 +17,7 @@ export const HeroBanner = () => {
         target="_blank"
         rel="noopener noreferrer"
         href="/"
-        className="button button--primary"
+        className="button button--secondary"
       >
         Sign yourself up →
       </a>
