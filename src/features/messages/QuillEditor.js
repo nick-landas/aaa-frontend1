@@ -10,7 +10,7 @@ import { makeStyles } from 'tss-react/mui';
 import { Paper, IconButton } from '@mui/material'
 import SendIcon from '@mui/icons-material/Send'
 
-import { selectgroupById } from '../groups/groupsSlice'
+import { selectGroupById } from '../groups/groupsSlice'
 
 const useStyles = makeStyles()((theme) => {
     return {

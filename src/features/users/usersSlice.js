@@ -4,9 +4,9 @@ import {
     createEntityAdapter,
     createSelector,
   } from '@reduxjs/toolkit'
-  import teamwork from '../../api/teamwork'
+  import teamwork from '../../api/iluvlachat'
   
-  import { selectGroupById } from '../group/groupsSlice'
+  import { selectGroupById } from '../groups/groupsSlice'
   
   const usersAdapter = createEntityAdapter()
   
