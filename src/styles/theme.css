@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Yellowtail&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Yellowtail&display=swap");
 ;
 
 /* Theme */
 
-:root {
+/* :root {
   --orange: #ff4f40;
   --indigo: #635dff;
   --white: #fff;
@@ -69,4 +69,4 @@
   --font-primary: "Open Sans", sans-serif;
   --font-secondary: "Yellowtail", sans-serif;
   --font-mono: "Open Sans", monospace;
-}
+/* } */ 

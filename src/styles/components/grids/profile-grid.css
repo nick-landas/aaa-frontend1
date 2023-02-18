@@ -1,10 +1,10 @@
-.profile-grid {
+/* .profile-grid {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; */
 
   /* responsive */
 
-  margin-top: 48px;
+  /* margin-top: 48px;
 }
 
 .profile__header {
@@ -15,11 +15,11 @@
 
 .profile__avatar {
   border: solid 2px var(--aqua);
-  border-radius: 50%;
+  border-radius: 50%; */
 
   /* responsive */
 
-  height: 80px;
+  /* height: 80px;
   width: 80px;
 }
 
@@ -36,10 +36,10 @@
   color: var(--white);
 }
 
-.profile__details {
+.profile__details { */
   /* responsive */
 
-  margin-top: 32px;
+  /* margin-top: 32px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -67,4 +67,4 @@
   .profile__details {
     margin-top: 1.6rem;
   }
-}
+} */

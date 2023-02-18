@@ -30,7 +30,7 @@ import {
   )
   
   export const fetchGroups = createAsyncThunk(
-    'groups/groupgroups',
+    'groups/fetchGroups',
     async (currentUserId) => {
       const response = await iluvlachat.get('/groups')
       return response.data.data.reduce((result, group) => {
@@ -48,7 +48,7 @@ import {
   )
   
   export const addNewGroup = createAsyncThunk('groups/addNewGroup', async (data) => {
-    const response = await iluvlachat.post('/grops', { group: data })
+    const response = await iluvlachat.post('/groups', { group: data })
     const groupData = response.data.data
     const userIds = groupData.relationships.users.data.map((user) => user.id)
     return { id: groupData.id, ...groupData.attributes, userIds }

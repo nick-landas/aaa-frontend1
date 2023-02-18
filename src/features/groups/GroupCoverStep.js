@@ -64,7 +64,7 @@ const GroupCoverStep = ({ cover, handleCoverChange }) => {
   // set initial images
   useEffect(() => {
     const search = async () => {
-      const { data } = await pixabay.get('/search?', {
+      const { data } = await pixabay.get('search?', {
         params: { query: 'candy' },
       })
       setInitialImgs(data.results)
@@ -75,7 +75,7 @@ const GroupCoverStep = ({ cover, handleCoverChange }) => {
   // Fetch API 500 ms after user stops typing
   useEffect(() => {
     const search = async () => {
-      const { data } = await pixabay.get('', {
+      const { data } = await pixabay.get('search?', {
         params: { query: query },
       })
       setResults(data.results)

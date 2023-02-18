@@ -26,7 +26,7 @@ const useStyles = makeStyles()((theme) => {
         marginLeft: drawerWidth,
       },
       background:
-        'linear-gradient(linear-gradient(90deg, rgba(236,69,109,1) 0%, rgba(236,166,42,1) 80%, rgba(255,0,46,1) 100%);',
+        'linear-gradient(125deg, rgba(236,69,109,100) 0%, rgba() 100%)',
     },
     menuButton: {
       marginRight: theme.spacing(2),

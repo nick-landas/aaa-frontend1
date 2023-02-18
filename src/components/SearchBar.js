@@ -25,7 +25,7 @@ const useStyles = makeStyles()((theme) => {
     },
   },
   searchIcon: {
-    padding: theme.spacing(0, 2),
+    padding: theme.spacing(4,21),
     height: '100%',
     position: 'absolute',
     pointerEvents: 'none',
@@ -82,7 +82,7 @@ const SearchBar = () => {
           <div ref={params.InputProps.ref}>
             <InputBase
               {...params.inputProps}
-              placeholder="Search for your groups..."
+              placeholder="Search for your groups"
               classes={{ root: classes.inputRoot, input: classes.inputInput }}
             />
             

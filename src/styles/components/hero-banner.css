@@ -1,4 +1,4 @@
-.hero-banner {
+/* .hero-banner {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@
 
   /* responsive */
 
-  margin: 0 auto;
+  /* margin: 0 auto;
   padding: 6.2rem 12.4rem;
 }
 
@@ -42,11 +42,11 @@
   background-color: var(--white);
   border-radius: 50%;
 
-  box-shadow: 0 2px 4px rgb(0 0 0 / 12%);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 12%); */
 
   /* responsive */
 
-  width: 12.8rem;
+  /* width: 12.8rem;
   height: 12.8rem;
 }
 
@@ -65,7 +65,7 @@
 
   /* responsive */
 
-  margin: 2.4rem 0 8px 0;
+  /* margin: 2.4rem 0 8px 0;
 
   font-size: 4.8rem;
 }
@@ -73,10 +73,10 @@
 .hero-banner__description {
   max-width: 58rem;
 
-  text-align: center;
+  text-align: center; */
 
   /* responsive */
-
+/* 
   margin-bottom: 3.2rem;
 
   font-size: 20px;
@@ -111,4 +111,4 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
-}
+}  */
