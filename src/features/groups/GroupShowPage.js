@@ -58,7 +58,7 @@ const GroupShowPage = ({ open, handleClose, group, handleJoin }) => {
           {group.description}
         </Typography>
         <div className={classes.ImageList}>
-          <ImageList cellHeight={180} className={classes.ImageList}>
+          <ImageList>
             <ImageListItem key="Subheader" cols={2} style={{ height: 'auto' }}>
               <ListSubheader component="div">
                 {members.length} members

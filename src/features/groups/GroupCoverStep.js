@@ -7,7 +7,7 @@ import {
 } from '@mui/material'
 import { makeStyles } from 'tss-react/mui';
 
-import pixabay from '../../api/pixabay'
+import pexels from '../../api/pexels'
 
 const useStyles = makeStyles()((theme) => {
     return {
@@ -60,11 +60,12 @@ const GroupCoverStep = ({ cover, handleCoverChange }) => {
     const [query, setQuery] = useState('')
     const [results, setResults] = useState([])
     const [initialImgs, setInitialImgs] = useState([])
+   
 
   // set initial images
   useEffect(() => {
     const search = async () => {
-      const { data } = await pixabay.get('search?', {
+      const { data } = await pexels.get('/v1/search?', {
         params: { query: 'candy' },
       })
       setInitialImgs(data.results)
@@ -75,7 +76,7 @@ const GroupCoverStep = ({ cover, handleCoverChange }) => {
   // Fetch API 500 ms after user stops typing
   useEffect(() => {
     const search = async () => {
-      const { data } = await pixabay.get('search?', {
+      const { data } = await pexels.get('/v1/search?', {
         params: { query: query },
       })
       setResults(data.results)
@@ -118,14 +119,14 @@ const GroupCoverStep = ({ cover, handleCoverChange }) => {
       <TextField
         autoFocus
         id="search-query-input"
-        label="Search on Pixabay"
+        label="Search on Pexels"
         placeholder="Choose an image below or search for your own"
         margin="normal"
         fullWidth
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <ImageList cellHeight={150} cols={3} className={classes.gridList}>
+      <ImageList rowHeight={150} cols={3} className={classes.gridList}>
         {renderedImgList()}
       </ImageList>
     </>

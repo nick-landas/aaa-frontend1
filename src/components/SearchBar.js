@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { makeStyles } from 'tss-react/mui'
-import { InputBase } from '@mui/material'
-import NoSsr from '@mui/base/NoSsr';
+// import { InputBase } from '@mui/material'
+import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete'
 import SearchIcon from '@mui/icons-material/Search'
 
@@ -25,7 +25,7 @@ const useStyles = makeStyles()((theme) => {
     },
   },
   searchIcon: {
-    padding: theme.spacing(4,21),
+    padding: theme.spacing(2,22),
     height: '100%',
     position: 'absolute',
     pointerEvents: 'none',
@@ -59,7 +59,7 @@ const SearchBar = () => {
 
   // search for messages
   // add another property - allgroups boolean
-  const handleChange = (e, newValue) => {
+  const handleChange = (_e, newValue) => {
     navigate(`/groups/${newValue.id}`)
     setValue(newValue)
   }
@@ -69,7 +69,6 @@ const SearchBar = () => {
       <div className={classes.searchIcon}>
         <SearchIcon />
       </div>
-      <NoSsr>
       <Autocomplete
         value={value}
         onChange={(e, newValue) => {
@@ -79,17 +78,15 @@ const SearchBar = () => {
         getOptionLabel={(option) => option.name}
         style={{ width: 300 }}
         renderInput={(params) => (
-          <div ref={params.InputProps.ref}>
-            <InputBase
-              {...params.inputProps}
+          <TextField id="standard-basic" variant="standard"
+              {...params}
               placeholder="Search for your groups"
               classes={{ root: classes.inputRoot, input: classes.inputInput }}
             />
             
-          </div>
+          
         )}
       />
-      </NoSsr>
     </div>
   )
 }

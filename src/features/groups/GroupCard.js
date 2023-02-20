@@ -54,7 +54,7 @@ const GroupCard = ({ group }) => {
       try {
         setJoinRequestStatus('pending')
         const updatedMembers = group.userIds.concat(currentUserId)
-        const resultAction = await dispatch(
+        const resultAction = dispatch(
           updateGroupMember({
             id: group.id,
             data: { user_ids: updatedMembers },
@@ -102,7 +102,7 @@ const GroupCard = ({ group }) => {
               </Button>
             )}
             <Button size="small" color="primary" onClick={handleClickOpen}>
-              Learn More
+              Group Info
             </Button>
           </CardActions>
         </Card>

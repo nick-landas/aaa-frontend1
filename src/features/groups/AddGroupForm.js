@@ -19,7 +19,7 @@ import GroupMembersStep from './GroupMembersStep'
 import { addNewGroup } from './groupsSlice'
 import { setSnackbar } from '../../ui/snackbarSlice'
 
-const stepTitles = ['Provide details of Group', 'Select a cover photo', 'Add Group members']
+const stepTitles = ['Provide Group details', 'Select a cover photo', 'Add Group members']
 
 const AddGroupForm = ({ open, handleClose }) => {
   const currentUserId = useSelector((state) => state.users.currentUser)
