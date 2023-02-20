@@ -15,7 +15,7 @@ const Logo = () => {
     const { classes } = useStyles();
   return (
     <Typography variant="h5" className={classes.logo}>
-      I Luv LA (Lower Alabama) Chat.
+      I ❤️ LA
     </Typography>
   )
 }

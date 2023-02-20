@@ -8,6 +8,7 @@ import {
   
   import iluvlachat from '../../api/iluvlachat'
   
+  
   const groupsAdapter = createEntityAdapter()
   
   const initialState = groupsAdapter.getInitialState({
@@ -59,6 +60,7 @@ import {
     async ({ id, data }) => {
       const response = await iluvlachat.patch(`/groups/${id}`, { group: data })
       const groupData = response.data.data
+      console.log(groupData)
       const userIds = groupData.relationships.users.data.map((user) => user.id)
       return { id: groupData.id, ...groupData.attributes, userIds }
     }

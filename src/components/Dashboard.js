@@ -33,11 +33,11 @@ const Dashboard = () => {
 
   return (
     <Container maxWidth="md" className={classes.root}>
-      <Typography variant="h2" gutterBottom color="textSecondary">
-        Hello, {firstName}
+      <Typography variant="h2" gutterBottom color="textPrimary">
+        Hey, {firstName}!
       </Typography>
       <Typography variant="h4" color="textSecondary">
-        The time is currently {format(time, 'PPpp')}
+        The time is currently {format(time, 'PPPPpppp')}
       </Typography>
     </Container>
   )

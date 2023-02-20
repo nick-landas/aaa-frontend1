@@ -18,7 +18,7 @@ import AuthNavBar from './components/AuthNavBar.js';
 import SideNav from './components/SideNav';
 import LandingPage from './components/LandingPage';
 import LoadingBkgrnd from './components/LoadingBkgrnd';
-import GroupGrid from './features/groups/GroupGrid';
+import GroupsGrid from './features/groups/GroupsGrid';
 import { AuthenticatedRoute } from './AuthenticatedRoute';
 import GlobalSnackbar from './ui/GlobalSnackbar';
 import MessagesList from './features/messages/MessagesList';
@@ -106,14 +106,14 @@ const App = (props) => {
         <main className={classes.content}>
           <div className={classes.toolbar} />
           <Routes>
-            <Route path="/" component={LandingPage} />
+            <Route path="/" element={<LandingPage/>} />
             <Route
               path="/dashboard"
               element={<AuthenticatedRoute component={Dashboard} />}
             />
             <Route
               path="/groups"
-              element={<AuthenticatedRoute component={GroupGrid} />}
+              element={<AuthenticatedRoute component={GroupsGrid} />}
             />
             <Route
               path="/groups/:groupId"

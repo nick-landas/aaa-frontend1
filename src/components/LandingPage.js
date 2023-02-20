@@ -16,24 +16,24 @@ const useStyles = makeStyles()((theme) => {
     width: '100vw',
   },
   title: {
-    fontFamily: 'Yellowtail, serif',
+    fontFamily: 'Amatic SC, serif',
     fontWeight: 400,
   },
   introTitle: {
     marginBottom: theme.spacing(5),
-    fontFamily: 'Open Sans, serif',
+    fontFamily: 'Josefin Sans, serif',
     fontWeight: 600,
   },
   buttonContainer: {},
   introBackground: {
     background:
-      'linear-gradient(125deg, rgba(76,181,245,1) 0%, rgba(179,193,0,1) 100%)',
+      'linear-gradient(90deg, rgba(239,198,54,1) 0%, rgba(243,239,169,1) 41%, rgba(243,171,58,1) 100%);',
   },
   welcomePhoto: {
     width: '48%',
     height: 'auto',
     position: 'absolute',
-    top: '28vh',
+    top: '18vh',
     right: '10%',
     [theme.breakpoints.down('sm')]: {
       display: 'none',
@@ -47,9 +47,9 @@ const LandingPage = () => {
   return (
     <Grid container component="main" className={classes.root} spacing={0}>
       <Grid container item xs={12} sm={6} direction="column" justify="center">
-        <Box maxWidth="450px" alignSelf="center">
-          <Typography variant="h2" className={classes.title}>
-            I Luv LA (Lower Alabama) Chat
+        <Box maxWidth="300px" alignSelf="center">
+          <Typography variant="h1" className={classes.title}>
+            I Luv LA (Lower Alabama) 
           </Typography>
           <Typography variant="h4" className={classes.introTitle}>
             We Luv It!
