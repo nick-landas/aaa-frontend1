@@ -90,7 +90,7 @@ const GroupCard = ({ group }) => {
               <Typography gutterBottom variant="h5">
                 {truncatedName}
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography variant="body2" color="textSecondary" component="span">
                 {truncatedDesc}
               </Typography>
             </CardContent>

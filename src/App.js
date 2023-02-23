@@ -117,7 +117,7 @@ const App = (props) => {
             />
             <Route
               path="/groups/:groupId"
-              element={<AuthenticatedRoute children={MessagesList} />}
+              element={<AuthenticatedRoute component={MessagesList} />}
             />
           </Routes>
         </main>

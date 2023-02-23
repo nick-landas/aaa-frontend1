@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react'
 
-import {
-  TextField,
-  ImageList,
-  ButtonBase,
-} from '@mui/material'
+import {ButtonBase} from '@mui/material'
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import TextField from '@mui/material/TextField';
 import { makeStyles } from 'tss-react/mui';
 
-import pexels from '../../api/pexels'
+import unsplashAPI from '../../api/unsplashAPI'
 
 const useStyles = makeStyles()((theme) => {
     return {
@@ -65,8 +64,8 @@ const GroupCoverStep = ({ cover, handleCoverChange }) => {
   // set initial images
   useEffect(() => {
     const search = async () => {
-      const { data } = await pexels.get('/v1/search?', {
-        params: { query: 'candy' },
+      const { data } = await unsplashAPI.get('search/photos', {
+        params: { query: 'sea life' },
       })
       setInitialImgs(data.results)
     }
@@ -76,7 +75,7 @@ const GroupCoverStep = ({ cover, handleCoverChange }) => {
   // Fetch API 500 ms after user stops typing
   useEffect(() => {
     const search = async () => {
-      const { data } = await pexels.get('/v1/search?', {
+      const { data } = await unsplashAPI.get('search/photos', {
         params: { query: query },
       })
       setResults(data.results)
@@ -94,7 +93,7 @@ const GroupCoverStep = ({ cover, handleCoverChange }) => {
   const renderedImgList = () => {
     const data = results.length === 0 ? initialImgs : results
     return data.map((img) => (
-      <ImageList key={img.id}>
+      <ImageListItem key={img.id}>
         <ButtonBase
           focusRipple
           className={classes.image}
@@ -110,7 +109,7 @@ const GroupCoverStep = ({ cover, handleCoverChange }) => {
             <span className={classes.imageBackdrop} />
           )}
         </ButtonBase>
-      </ImageList>
+      </ImageListItem>
     ))
   }
 

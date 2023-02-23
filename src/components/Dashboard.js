@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
 import { format } from 'date-fns'
 
-import { Container, Typography } from '@mui/material'
+import { Container, Typography, Paper } from '@mui/material'
 import { makeStyles } from 'tss-react/mui';
 
 const useStyles = makeStyles()((theme) => {
@@ -33,12 +33,14 @@ const Dashboard = () => {
 
   return (
     <Container maxWidth="md" className={classes.root}>
+      <Paper style={{backgroundColor:'#1fa9c2'}}>
       <Typography variant="h2" gutterBottom color="textPrimary">
         Hey, {firstName}!
       </Typography>
       <Typography variant="h4" color="textSecondary">
-        The time is currently {format(time, 'PPPPpppp')}
+        Today is {format(time, 'PPPPpp')}
       </Typography>
+      </Paper>
     </Container>
   )
 }

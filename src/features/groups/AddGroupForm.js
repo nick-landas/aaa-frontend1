@@ -64,7 +64,7 @@ const AddGroupForm = ({ open, handleClose }) => {
     } else {
       try {
         setAddRequestStatus('pending')
-        const resultAction = await dispatch(
+        const resultAction = dispatch(
           addNewGroup({ name, description, image_url: cover, user_ids: members })
         )
         unwrapResult(resultAction)
