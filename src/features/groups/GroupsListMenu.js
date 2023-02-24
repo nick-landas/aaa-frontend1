@@ -78,7 +78,7 @@ const serverError = {
 const successMessage = (name) => ({
   open: true,
   type: 'success',
-  message: `Left ${name} successfully`,
+  message: `You left the ${name} group `,
 })
 
 export default GroupsListMenu
