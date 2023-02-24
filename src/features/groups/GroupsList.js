@@ -47,7 +47,7 @@ const GroupsList = () => {
         color="primary"
         style={{ marginLeft: '2rem' }}
         startIcon={<AddIcon />}>
-        Join or create a group
+        Join group/Create group
       </Button>
       {renderedGroupListItems}
       <GroupsListMenu

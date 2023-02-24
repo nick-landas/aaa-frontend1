@@ -55,14 +55,14 @@ const GroupsListMenu = (props) => {
           setAnchorEl(null)
           setOpen(true)
         }}>
-        Details
+        Group Info
       </MenuItem>
       <MenuItem
         onClick={() => {
           setAnchorEl(null)
           handleLeaveClick()
         }}>
-        Leave
+        Leave Group
       </MenuItem>
     </Menu>
   )

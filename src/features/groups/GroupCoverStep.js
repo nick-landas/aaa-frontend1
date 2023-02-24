@@ -118,7 +118,7 @@ const GroupCoverStep = ({ cover, handleCoverChange }) => {
       <TextField
         autoFocus
         id="search-query-input"
-        label="Search on Pexels"
+        label="Search Unsplash"
         placeholder="Choose an image below or search for your own"
         margin="normal"
         fullWidth
