@@ -30,11 +30,11 @@ const useStyles = makeStyles()((theme) => {
       'linear-gradient(90deg, rgba(239,198,54,1) 0%, rgba(243,239,169,1) 41%, rgba(243,171,58,1) 100%);',
   },
   welcomePhoto: {
-    width: '48%',
+    width: '56%',
     height: 'auto',
     position: 'absolute',
-    top: '18vh',
-    right: '10%',
+    top: '12vh',
+    right: '02%',
     [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
@@ -46,7 +46,7 @@ const LandingPage = () => {
 
   return (
     <Grid container component="main" className={classes.root} spacing={0}>
-      <Grid container item xs={12} sm={6} direction="column" justify="center">
+      <Grid container className={classes.introBackground}item xs={12} sm={6} direction="column" justify="center">
         <Box maxWidth="300px" alignSelf="center">
           <Typography variant="h1" className={classes.title}>
             I Luv LA (Lower Alabama) 
@@ -59,7 +59,7 @@ const LandingPage = () => {
             with similar interests and passions to explore 
             everything that Lower Alabama aka the Redneck Riviera offers.
           </Typography>
-          <Grid
+          <Grid 
             container
             direction="row"
             justify="center"
@@ -83,7 +83,7 @@ const LandingPage = () => {
           </Grid>
         </Box>
       </Grid>
-      <Grid item xs={12} sm={6} className={classes.introBackground}>
+      <Grid item xs={12} sm={6} >
         <img
           className={classes.welcomePhoto}
           src={welcomePhoto}

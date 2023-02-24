@@ -127,8 +127,8 @@ const serverError = {
 
 const successMessage = (name) => ({
   open: true,
-  type: 'success',
-  message: `Joined ${name} successfully`,
+  type: 'info',
+  message: `Welcome to the ${name} group!`,
 })
 
 export default GroupCard

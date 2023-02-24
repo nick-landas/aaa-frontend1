@@ -39,7 +39,7 @@ const GlobalSnackbar = () => {
       <Snackbar
         anchorOrigin={{
           vertical: 'top',
-          horizontal: 'center',
+          horizontal: 'left',
         }}
         open={open}
         autoHideDuration={6000}

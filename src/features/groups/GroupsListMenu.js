@@ -10,7 +10,6 @@ import { setSnackbar } from '../../ui/snackbarSlice'
 
 const GroupsListMenu = (props) => {
   const { clickedGroup, anchorEl, setAnchorEl, setOpen } = props
-  console.log('clickedGroup:', clickedGroup);
   const currentUserId = useSelector((state) => state.users.currentUser)
 
   const navigate = useNavigate()
@@ -34,9 +33,9 @@ const GroupsListMenu = (props) => {
             )
         unwrapResult(resultAction)
         navigate('/groups')
-        dispatch(setSnackbar(successMessage(clickedGroup.name)))
+        dispatch(setSnackbar(goodbyeMessage(clickedGroup.name)))
       } catch (err) {
-        console.error('Failed to save the group: ', err)
+        console.error('Failed to leave the group: ', err)
         setLeaveRequestStatus('failed')
       } finally {
         setLeaveRequestStatus('idle')
@@ -75,9 +74,9 @@ const serverError = {
   message: 'Server busy, try again later',
 }
 
-const successMessage = (name) => ({
+const goodbyeMessage = (name) => ({
   open: true,
-  type: 'success',
+  type: 'info',
   message: `You left the ${name} group `,
 })
 
