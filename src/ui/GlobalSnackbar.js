@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { makeStyles } from 'tss-react/mui';
 import Snackbar from '@mui/material/Snackbar'
-import MuiAlert from '@mui/material/Alert'
+import Alert from '@mui/material/Alert'
 
 import { setSnackbar } from './snackbarSlice'
 
-const Alert = (props) => <MuiAlert elevation={6} variant="filled" {...props} />
+const Alerts = (props) => <Alert elevation={6} variant="filled" {...props} />
 
 const useStyles = makeStyles()((theme) => {
     return {
@@ -30,24 +30,28 @@ const GlobalSnackbar = () => {
         if (reason === 'clickaway') {
             return
         }
-        dispatch(setSnackbar(false, type, message))
+        dispatch(setSnackbar({open: false, type, message}))
     }
 
   return (
+  
     <div className={classes.root}>
       <Snackbar
         anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
+          vertical: 'top',
+          horizontal: 'center',
         }}
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}>
-        <Alert onClose={handleClose} severity={type}>
+          <div>
+        <Alerts onClose={handleClose} severity={type}>
           {message}
-        </Alert>
+        </Alerts>
+        </div>
       </Snackbar>
     </div>
+  
   )
 }
 

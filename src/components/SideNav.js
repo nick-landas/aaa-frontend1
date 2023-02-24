@@ -57,6 +57,7 @@ const SideNav = ({ handleDrawerToggle, container, mobileOpen }) => {
   const drawerContent = (
     <div className={classes.toolbar}>
       <GroupsList />
+      <br></br>      
       {footer}
     </div>
   );

@@ -51,7 +51,7 @@ const GroupsList = () => {
       </Button>
       {renderedGroupListItems}
       <GroupsListMenu
-        clickedgroup={clickedGroup}
+        clickedGroup={clickedGroup}
         anchorEl={anchorEl}
         setAnchorEl={setAnchorEl}
         setOpen={setOpen}

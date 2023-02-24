@@ -10,7 +10,7 @@ import { setSnackbar } from '../../ui/snackbarSlice'
 
 const GroupsListMenu = (props) => {
   const { clickedGroup, anchorEl, setAnchorEl, setOpen } = props
-
+  console.log('clickedGroup:', clickedGroup);
   const currentUserId = useSelector((state) => state.users.currentUser)
 
   const navigate = useNavigate()
@@ -25,13 +25,13 @@ const GroupsListMenu = (props) => {
         setLeaveRequestStatus('pending')
         const updatedMembers = clickedGroup.userIds.filter(
           (id) => id !== currentUserId
-        )
+          )
         const resultAction = dispatch(
             updateGroupMember({
                 id: clickedGroup.id,
                 data: { user_ids: updatedMembers },
             })
-        )
+            )
         unwrapResult(resultAction)
         navigate('/groups')
         dispatch(setSnackbar(successMessage(clickedGroup.name)))
